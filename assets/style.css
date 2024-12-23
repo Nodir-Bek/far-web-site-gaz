@@ -1,0 +1,26 @@
+:root {
+  --base-font-size: 16px; /* Default font size */
+}
+
+* {
+  font-size: var(--base-font-size);
+  transition: font-size 0.3s ease-in-out;
+  font-display: swap;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem; /* Tailwind 'text-sm' */
+  border-radius: 0.375rem; /* Tailwind 'rounded' */
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.tooltip-visible {
+  opacity: 1;
+  transform: translateY(-8px);
+}
